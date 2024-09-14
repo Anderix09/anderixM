@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Me perdona Melanie linda?</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Melanie</h1>
+        
+        <h2>Me perdonas?</h2>
+        <div class="buttons">
+            <button class="btn yes">si</button>
+            <button class="btn no">No, Anderson Me caes muy mal</button>
+        </div>
+    </div>
+
+    <script>
+        // Cuando haga clic en "Sí"
+        document.querySelector('.yes').addEventListener('click', function() {
+            alert('Ayyy, tan lindaa, te amo');
+        });
+
+        // Obtener el botón "No" y hacer que se mueva
+        const noButton = document.querySelector('.no');
+
+        noButton.addEventListener('mouseover', function() {
+            // Cambiar la posición del botón "No"
+            const randomX = Math.random() * (window.innerWidth - noButton.offsetWidth);
+            const randomY = Math.random() * (window.innerHeight - noButton.offsetHeight);
+
+            noButton.style.position = 'absolute';
+            noButton.style.left = `${randomX}px`;
+            noButton.style.top = `${randomY}px`;
+        });
+    </script>
+</body>
+</html>
